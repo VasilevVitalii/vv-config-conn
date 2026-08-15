@@ -1,0 +1,51 @@
+{
+    "version": "0.0.1",
+    "name": "vv-config-conn",
+    "description": "Storage of database connection settings (MS SQL Server, PostgreSQL, Oracle, Firebird)",
+    "type": "module",
+    "main": "distjs/src/index.js",
+    "types": "distjs/src/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./distjs/src/index.d.ts",
+            "import": "./distjs/src/index.js"
+        }
+    },
+    "files": [
+        "distjs/src"
+    ],
+    "scripts": {
+        "build": "tsc && tsc-esm-fix --target=distjs",
+        "test": "node --import tsx --test test/*.test.ts"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/VasilevVitalii/vv-config-conn.git"
+    },
+    "bugs": {
+        "url": "https://github.com/VasilevVitalii/vv-config-conn/issues"
+    },
+    "homepage": "https://github.com/VasilevVitalii/vv-config-conn#readme",
+    "keywords": [
+        "config",
+        "jsonc",
+        "connection",
+        "mssql",
+        "postgres",
+        "oracle",
+        "firebird"
+    ],
+    "author": "Vitalii Vasilev",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/node": "^26.2.0",
+        "esbuild": "^0.25",
+        "tsc-esm-fix": "^3.1.2",
+        "tsx": "^4.21.0",
+        "typescript": "^5.9.3"
+    },
+    "dependencies": {
+        "jsonc-parser": "^3.3.1",
+        "vv-config-jsonc": "^1.0.6"
+    }
+}
