@@ -10,12 +10,14 @@ export { SConnOra, type TConnOra } from './conn/ora'
 export { SConnPg, type TConnPg } from './conn/pg'
 export { SConnFb, type TConnFb } from './conn/fb'
 
-export enum EProvider {
-	mssql = 'mssql',
-	ora = 'ora',
-	pg = 'pg',
-	fb = 'fb',
-}
+export const EProvider = {
+	mssql: 'mssql',
+	ora: 'ora',
+	pg: 'pg',
+	fb: 'fb',
+} as const
+
+export type EProvider = (typeof EProvider)[keyof typeof EProvider]
 
 export type TConnectionByProvider = {
 	[EProvider.mssql]: TConnMssql

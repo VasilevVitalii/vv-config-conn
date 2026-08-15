@@ -1,5 +1,5 @@
 {
-    "version": "0.0.2",
+    "version": "0.0.3",
     "name": "vv-config-conn",
     "description": "Storage of database connection settings (MS SQL Server, PostgreSQL, Oracle, Firebird)",
     "type": "module",
